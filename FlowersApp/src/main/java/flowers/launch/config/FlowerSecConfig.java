@@ -11,10 +11,7 @@ import org.springframework.security.web.access.AccessDeniedHandler;
 public class FlowerSecConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
     private AccessDeniedHandler accessDeniedHandler;
-
-    // roles admin allow to access /admin/**
-    // roles user allow to access /user/**
-    // custom 403 access denied handler
+    
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
@@ -34,8 +31,7 @@ public class FlowerSecConfig extends WebSecurityConfigurerAdapter {
 					.and()
                 .exceptionHandling().accessDeniedHandler(accessDeniedHandler);
     }
-
-    // create two users, admin and user
+    
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
 
