@@ -1,0 +1,18 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+	<head>
+	</head>
+	<body>
+		<div th:fragment="langBar">		
+		    <div class="container">
+		    	<div th:fragment="langBar">
+					<span class="red">Languages:</span> 
+					<a th:href="@{/?lang=uk}" th:text="#{language.uk}">></a> 					
+					<a th:href="@{/?lang=de}" th:text="#{language.de}">></a> 					
+					<a th:href="@{/?lang=fr}" th:text="#{language.fr}">></a>					
+				</div>
+		    </div>
+	    </div>
+    </body>
+</html>

@@ -13,7 +13,7 @@ public class ViewController {
 
     @GetMapping("/")
     public String home1() {
-        return "/login";
+        return "/main";
     }
 
     @GetMapping("/main")
@@ -39,7 +39,7 @@ public class ViewController {
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("User", new User(null, "", "", ""));
-        return "/login";
+        return "/main";
     }
 
     @PostMapping("/login")
