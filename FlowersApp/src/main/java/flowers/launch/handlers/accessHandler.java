@@ -14,7 +14,7 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.access.AccessDeniedHandler;
 
-@Configuration
+
 public class accessHandler implements AccessDeniedHandler {
 	private static Logger logger = LoggerFactory.getLogger(accessHandler.class);
 
