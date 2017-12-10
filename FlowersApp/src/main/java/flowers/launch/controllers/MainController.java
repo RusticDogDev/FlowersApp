@@ -23,29 +23,29 @@ public class MainController {
 
     @GetMapping("/admin")
     public String admin() {
-        return "/admin";
+        return "admin";
     }
 
     @GetMapping("/user")
     public String user() {
-        return "/user";
+        return "user";
     }
 
     @GetMapping("/about")
     public String about() {
-        return "/about";
+        return "about";
     }
 
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("User", new User(null, "", "", ""));
-    	return "/login";
+    	return "login";
     }
     
     @PostMapping("/login")
     public String loginSubmit(@ModelAttribute User user)
     {        	
-    	return "/main";
+    	return "main";
     }
 
     @GetMapping("/403")
