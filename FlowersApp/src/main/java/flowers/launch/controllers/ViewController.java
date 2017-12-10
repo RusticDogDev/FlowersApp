@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import flowers.launch.models.User;
 
 @Controller
-public class MainController {
+public class ViewController {
 	
 	@GetMapping("/")
     public String home1() {
-        return "/main";
+        return "/login";
     }
 
     @GetMapping("/main")

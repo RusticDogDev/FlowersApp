@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Spring Boot Thymeleaf + Spring Security</title>
-    <div th:replace="fragments/header :: header-css"/>
+    <div th:replace="fragments/header :: header-css"></div>
 </head>
 	<body>	
 		<div th:replace="fragments/header :: header"></div>		
@@ -14,7 +14,6 @@
 		        <h2>3. Visit <a th:href="@{/about}">Normal page</a></h2>
 		    </div>		
 		</div>
-		<!-- /.container -->
 		<div th:replace="fragments/footer :: footer"></div>
 	</body>
 </html>
