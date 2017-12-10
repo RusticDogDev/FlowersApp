@@ -5,11 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import flowers.launch.models.User;
 
-@RestController
 @Controller
 public class ViewController {
 
@@ -25,29 +23,29 @@ public class ViewController {
 
     @GetMapping("/admin")
     public String admin() {
-        return "admin";
+        return "/admin";
     }
 
     @GetMapping("/user")
     public String user() {
-        return "user";
+        return "/user";
     }
 
     @GetMapping("/about")
     public String about() {
-        return "about";
+        return "/about";
     }
 
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("User", new User(null, "", "", ""));
-        return "login";
+        return "/login";
     }
 
     @PostMapping("/login")
     public String loginSubmit(@ModelAttribute User user)
     {
-        return "main.html";
+        return "/main.html";
     }
 
     @GetMapping("/403")
