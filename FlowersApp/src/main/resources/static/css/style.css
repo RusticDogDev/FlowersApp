@@ -10,4 +10,15 @@ footer{
 .navtext{
 	color:#302e2c;
 }
-
+div.left_menu{
+	float: left;
+	width: 30%;
+	height:100px
+	background-color: red;   
+}
+div.central_menu{
+	float: right;
+	height: 70%;
+	height:100px 
+	background-color: blue;  
+}

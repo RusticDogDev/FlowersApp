@@ -12,12 +12,12 @@ import flowers.launch.models.User;
 public class ViewController {
 
     @GetMapping("/")
-    public String home1() {
+    public String mainA() {
         return "/main";
     }
 
     @GetMapping("/main")
-    public String home() {
+    public String mainB() {
         return "/main";
     }
 
@@ -35,6 +35,11 @@ public class ViewController {
     public String about() {
         return "/about";
     }
+    
+    @GetMapping("/packages")
+    public String packages(Model model) {        
+        return "/packages";
+    }
 
     @GetMapping("/login")
     public String login(Model model) {
@@ -45,7 +50,7 @@ public class ViewController {
     @PostMapping("/login")
     public String loginSubmit(@ModelAttribute User user)
     {
-        return "/main.html";
+        return "/login";
     }
 
     @GetMapping("/403")
