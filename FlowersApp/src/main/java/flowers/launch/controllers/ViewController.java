@@ -9,18 +9,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import flowers.launch.models.User;
 
-<<<<<<< HEAD:FlowersApp/src/main/java/flowers/launch/controllers/ViewController.java
-<<<<<<< HEAD:FlowersApp/src/main/java/flowers/launch/controllers/MainController.java
 @RestController
-public class MainController {
-=======
 @Controller
 public class ViewController {
->>>>>>> 74ddf33215abfb9f5909e4472d6d173521cf55a0:FlowersApp/src/main/java/flowers/launch/controllers/ViewController.java
-=======
-@Controller
-public class ViewController {
->>>>>>> 74ddf33215abfb9f5909e4472d6d173521cf55a0:FlowersApp/src/main/java/flowers/launch/controllers/ViewController.java
 	
 	@GetMapping("/")
     public String home1() {
