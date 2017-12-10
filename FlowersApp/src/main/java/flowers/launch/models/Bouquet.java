@@ -14,15 +14,17 @@ public class Bouquet
 	private Long bouId;
 	private String bouType;
 	private String flowers;
+	private int cost;
 	
 	protected Bouquet() {}
 	
-	public Bouquet(Long bouId, String bouType, String flowers) 
+	public Bouquet(Long bouId, String bouType, String flowers, int cost) 
 	{
 		super();
 		this.setBouId(bouId);
 		this.setBouType(bouType);
 		this.setFlowers(flowers);
+		this.setCost(cost);
 	}
 	
 	public Long getBouId() {
@@ -55,6 +57,14 @@ public class Bouquet
                 "Bouquet[bouId=%d, bouType='%s', flowers='%s']",
                 bouId, bouType, flowers);
     }
+
+	public int getCost() {
+		return cost;
+	}
+
+	public void setCost(int cost) {
+		this.cost = cost;
+	}
 	
 
 
