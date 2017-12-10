@@ -4,22 +4,30 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+<<<<<<< HEAD
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
+=======
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 import org.springframework.stereotype.Controller;
 import flowers.launch.models.User;
+>>>>>>> 9df22bfc50089201d257372b8854b748cc28b343
 import flowers.launch.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication//(exclude = {MongoAutoConfiguration.class, MongoDataAutoConfiguration.class})
+<<<<<<< HEAD
 public class FlowersAppApplication extends WebMvcConfigurerAdapter {
 		
+=======
+public class FlowersAppApplication implements CommandLineRunner {
+	
+>>>>>>> 9df22bfc50089201d257372b8854b748cc28b343
 	@Autowired
 	private UserRepository userRepository;
 
