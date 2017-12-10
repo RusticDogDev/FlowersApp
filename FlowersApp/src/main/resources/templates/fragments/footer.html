@@ -6,7 +6,7 @@
 	<body>
 		<div th:fragment="footer">		
 		    <div class="container">		
-		        <footer>		             
+		        <footer style="float: left">		             
 		            <span sec:authorize="isAuthenticated()">
 		                Logged user: <span sec:authentication="name"></span> |
 		                Roles: <span sec:authentication="principal.authorities"></span> |
@@ -15,6 +15,16 @@
 		        <script type="text/javascript"
 		                src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>		
 		        </footer>
+		        <div th:fragment="language">		
+				    <div class="container">
+				    	<div th:fragment="language" style="float:right">
+							<span class="red">Languages:</span> 
+							<a th:href="@{/?lang=uk}" th:text="#{language.uk}"></a> 					
+							<a th:href="@{/?lang=de}" th:text="#{language.de}"></a> 					
+							<a th:href="@{/?lang=fr}" th:text="#{language.fr}"></a>					
+						</div>
+				    </div>
+	    		</div>
 		    </div>
 		</div>
 	</body>
