@@ -9,6 +9,4 @@ public interface FlowerService {
 	public Flower getById(String id);
 	public Flower getByName(String name);
 	
-	
-
 }
