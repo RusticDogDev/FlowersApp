@@ -38,7 +38,7 @@ public class MainController {
 
     @GetMapping("/login")
     public String login(Model model) {
-        model.addAttribute("User", new User());
+        model.addAttribute("User", new User(null, "", "", ""));
     	return "/login";
     }
     
