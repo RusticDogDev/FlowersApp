@@ -9,11 +9,11 @@ import flowers.launch.repositories.UserRepository;
 
 @SpringBootApplication
 public class FlowersAppApplication extends WebMvcConfigurerAdapter {
+		
+	@Autowired
+	private UserRepository userRepository;
 
-    @Autowired
-    private UserRepository userRepository;
-
-    public static void main(String[] args) {
-        SpringApplication.run(FlowersAppApplication.class, args);
-    }
+	public static void main(String[] args) {
+		SpringApplication.run(FlowersAppApplication.class, args);
+	}	
 }

@@ -12,8 +12,8 @@ import flowers.launch.models.User;
 @RestController
 @Controller
 public class ViewController {
-
-    @GetMapping("/")
+	
+	@GetMapping("/")
     public String home1() {
         return "/login";
     }
@@ -41,13 +41,13 @@ public class ViewController {
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("User", new User(null, "", "", ""));
-        return "login";
+    	return "login";
     }
-
+    
     @PostMapping("/login")
     public String loginSubmit(@ModelAttribute User user)
-    {
-        return "main.html";
+    {        	
+    	return "main.html";
     }
 
     @GetMapping("/403")
