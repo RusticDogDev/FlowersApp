@@ -29,7 +29,7 @@ public class DataLoader implements ApplicationRunner{
 	@Override
 	public void run(ApplicationArguments arg0) throws Exception {
 		userRepository.save(new User((long) 1123432,"regular", "kieran","guess"));
-		bouquetRepository.save(new Bouquet((long) 1123432,"halloweenBouquet", "r1o3c1"));		
+		bouquetRepository.save(new Bouquet((long) 1123432,"halloweenBouquet", "r1o3c1"));
 	}
 
 
