@@ -3,8 +3,6 @@ package flowers.launch.models;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.stereotype.Component;
-
 import flowers.launch.repositories.BouquetRepository;
 import flowers.launch.repositories.FlowerRepository;
 import flowers.launch.repositories.ItemRepository;
@@ -14,7 +12,7 @@ import flowers.launch.repositories.UserRepository;
 
 public class DataLoader implements ApplicationRunner{
 	
-	@Autowired // Find a PersonRepo bean and autowire it into personRepo
+	@Autowired 
 	BouquetRepository bouquetRepository;
 	@Autowired
 	FlowerRepository flowerRepository;

@@ -1,11 +1,21 @@
 package flowers.launch.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Item 
 {
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long itemId;
 	private String itemType;
 	private String message;
 	private int itemCost;
+	
+	protected Item() {}
 	
 	public Item(Long itemId, String itemType, String message, int itemCost) 
 	{
@@ -47,6 +57,13 @@ public class Item
 	public void setItemCost(int itemCost) {
 		this.itemCost = itemCost;
 	}
+	
+	@Override
+    public String toString() {
+        return String.format(
+                "Item[itemId=%d, itemType='%s', message='%s', itemCost=%d]",
+                itemId, itemType, message, itemCost);
+    }
 
 
 }

@@ -1,11 +1,21 @@
 package flowers.launch.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Transaction {
 	
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long transId;
 	private int cost;
 	private Long packId;
 	private Long userId;
+	
+	protected Transaction() {}
 	
 	public Transaction(Long transId, int cost, Long packId, Long userId) 
 	{
@@ -47,5 +57,12 @@ public class Transaction {
 	public void setUserId(Long userId) {
 		this.userId = userId;
 	}
+	
+	@Override
+    public String toString() {
+        return String.format(
+                "Transaction[transId=%d, cost=%d, packId=%d, userId=%d]",
+                transId, cost, packId, userId);
+    }
 
 }

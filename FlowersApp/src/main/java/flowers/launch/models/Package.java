@@ -1,11 +1,21 @@
 package flowers.launch.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Package {
 	
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long packId;
 	private String packType;
 	private Long bouId;
 	private Long itemId;
+	
+	protected Package() {}
 	
 	public Package(Long packId, String packType, Long bouId, Long itemId) 
 	{
@@ -47,5 +57,12 @@ public class Package {
 	public void setItemId(Long itemId) {
 		this.itemId = itemId;
 	}
+	
+	@Override
+    public String toString() {
+        return String.format(
+                "Package[packId=%d, packType='%s', bouId=%d', itemId='%d']",
+                packId, packType, bouId, itemId);
+    }
 
 }

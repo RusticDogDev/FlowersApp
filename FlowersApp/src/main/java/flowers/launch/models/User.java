@@ -1,11 +1,21 @@
 package flowers.launch.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class User {
 	
+	@Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
 	private Long userId;
 	private String userName;
 	private String userType;
 	private String password;
+	
+	protected User() {}
 	
 	public User(Long userId, String userName, String userType, String password) 
 	{
@@ -47,6 +57,13 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	@Override
+    public String toString() {
+        return String.format(
+                "User[userId=%d, userType='%s', userName='%s', password='%s']",
+                userId, userType, userName, password);
+    }
 
 
 }
