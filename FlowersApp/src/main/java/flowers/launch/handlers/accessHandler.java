@@ -33,6 +33,5 @@ public class accessHandler implements AccessDeniedHandler {
         }
 
         httpServletResponse.sendRedirect(httpServletRequest.getContextPath() + "/403");
-
     }
 }
