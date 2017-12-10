@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 <<<<<<< HEAD
+<<<<<<< HEAD
 import org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration;
 import org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -21,6 +22,15 @@ import flowers.launch.repositories.UserRepository;
 public class FlowersAppApplication implements CommandLineRunner {
 	
 =======
+@SpringBootApplication
+public class FlowersAppApplication extends WebMvcConfigurerAdapter {
+		
+>>>>>>> 74ddf33215abfb9f5909e4472d6d173521cf55a0
+=======
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import flowers.launch.repositories.UserRepository;
+
 @SpringBootApplication
 public class FlowersAppApplication extends WebMvcConfigurerAdapter {
 		
