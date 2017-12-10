@@ -40,6 +40,4 @@ public class FlowerSecConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .withUser("admin").password("password").roles("ADMIN");
     }
-    
-    
 }
