@@ -10,10 +10,4 @@ import flowers.launch.models.Transaction;
 public interface TransactionRepository extends MongoRepository<Transaction, Integer> 
 {
 	public List<Transaction> findByTransId(Long transId);
-	Transaction findOne(Long transId);
-	@SuppressWarnings("unchecked")
-	Transaction save (Transaction trans);
-	int update(Transaction trans);
-	@Query
-	int deleteOne(Long transId);
 }

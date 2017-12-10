@@ -10,11 +10,4 @@ import flowers.launch.models.Package;
 public interface PackageRepository extends MongoRepository<Package, Integer>
 {
 	public List<Package> findByPackId(Long packId);
-	List<Package> findAllByPackType(String packType);
-	Package findOne(Long packId);
-	@SuppressWarnings("unchecked")
-	Package save (Package pac);
-	int update(Package pac);
-	@Query
-	int deleteOne(Long packId);
 }
