@@ -45,7 +45,7 @@ public class ViewController {
     @PostMapping("/login")
     public String loginSubmit(@ModelAttribute User user)
     {        	
-    	return "main";
+    	return "main.html";
     }
 
     @GetMapping("/403")
