@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import flowers.launch.models.Package;
 import flowers.launch.models.User;
 import flowers.launch.services.PackageService;
-import flowers.launch.services.TransactionService;
 
 @Controller
 @SessionAttributes({"prodList", "itemTotal", "itemCount", "itemList"})
@@ -22,13 +21,14 @@ public class ViewController {
 	@Autowired
 	private PackageService packageService;	
 
-	public ViewController(PackageService packageService, TransactionService transactionService) {
+	public ViewController(PackageService packageService) {
 		this.packageService = packageService;		
 	}
 		
 	@RequestMapping({ "/" })
 	public String index(ModelMap model) {
-		model.addAttribute("prodList", this.packageService.findAll());		
+		model.addAttribute("prodList", this.packageService.findAll());
+		model.addAttribute("product", new Package());	
 		return "/main";
 	}
 

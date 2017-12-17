@@ -1,12 +1,11 @@
 <!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:th="http://www.thymeleaf.org">
-<head>
-    <title th:text="#{nav.home}"></title>
-    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />	
-	<link rel="stylesheet" type="text/css" href="..static/css/style.css" th:href="@{/css/style.css}" />	
-    <div th:replace="fragments/header :: header-css"/>	
-</head>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">	
+	<head>
+	    <title th:text="#{nav.home}"></title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />	
+		<link rel="stylesheet" type="text/css" href=".static/css/style.css" th:href="@{/css/style.css}" />	
+	    <div th:replace="fragments/header :: header-css"/>	
+	</head>
 	<body>	
 		<div th:replace="fragments/header :: header"></div>				
 		<div class="container">		
@@ -19,4 +18,19 @@
 		</div>
 		<div th:replace="fragments/footer :: footer"></div>
 	</body>
+	<style>
+		h2 {
+			margin-top:5px;
+		}
+		li.active {
+			background-color:#FFFFFF;
+			color:#080808
+		}		
+		.starter-template {
+			border-radius: 10px; 
+			background-color: darkseagreen; 
+			padding: inherit; 
+			padding: 5px;
+		}
+	</style>
 </html>

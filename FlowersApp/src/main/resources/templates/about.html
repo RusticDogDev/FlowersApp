@@ -3,19 +3,34 @@
 <head>
     <title th:text="#{nav.about}"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />	
-	<link rel="stylesheet" type="text/css" href="..static/css/style.css" th:href="@{/css/style.css}" />	
-    <div th:replace="fragments/header :: header-css"/>
+	<div th:replace="fragments/header :: header-css"/>
+	<link rel="stylesheet" type="text/css" href="..static/css/style.css" th:href="@{/css/style.css}" />	    
 </head>
 	<body>	
 		<div th:replace="fragments/header :: header"></div>				
 		<div class="container">		
-		    <div class="starter-template">
+		    <div class="starter-template">           
 		        <div class="Welcome">
-		        	<h2 th:text="#{nav.about}"></h2>
+		        	<h2 class="padding_top" th:text="#{nav.about}"></h2>
 		        	<div th:text="#{main.welcome_text}"></div>		        		        
 		        </div>		        		        	      
 		    </div>		
 		</div>
 		<div th:replace="fragments/footer :: footer"></div>
 	</body>
+	<style>
+		h2 {
+			margin-top:5px;
+		}
+		li.active {
+			background-color:#FFFFFF;
+			color:#080808
+		}
+		.starter-template {
+			border-radius: 10px; 
+			background-color: darkseagreen; 
+			padding: inherit; 
+			padding: 5px;
+		}
+	</style>
 </html>
