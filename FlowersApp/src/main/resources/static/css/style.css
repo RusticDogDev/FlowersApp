@@ -4,9 +4,12 @@ h1{
 h2{
 	color:#FF0000;
 }
-footer{
+footer {
     margin-top:60px;
 }
 .navtext{
 	color:#302e2c;
+}
+.padding_top {
+	padding:20px;
 }

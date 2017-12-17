@@ -1,15 +1,17 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Packages</title>
-    <div th:replace="fragments/header :: header-css"></div>
+    <title th:text="#{nav.packages}"></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />	
+	<link rel="stylesheet" type="text/css" href="..static/css/style.css" th:href="@{/css/style.css}" />	
+    <div th:replace="fragments/header :: header-css"/>
 </head>
 	<body>	
 		<div th:replace="fragments/header :: header"></div>				
 		<div class="container">		
 		    <div class="starter-template">
 		        <div class="Welcome">
-		        	<h2 th:text="#{main.welcome}"></h2>
+		        	<h2 th:text="#{nav.packages}"></h2>
 		        	<div th:text="#{main.welcome_text}"></div>		        		        
 		        </div>		        		        	      
 		    </div>		

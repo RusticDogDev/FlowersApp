@@ -15,7 +15,9 @@ public class Package {
 	private Long bouId;
 	private Long itemId;
 	
-	protected Package() {}
+	public Package() {
+		
+	}
 	
 	public Package(Long packId, String packType, Long bouId, Long itemId) 
 	{

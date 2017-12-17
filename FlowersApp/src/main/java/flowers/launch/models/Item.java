@@ -15,7 +15,7 @@ public class Item
 	private String message;
 	private int itemCost;
 	
-	protected Item() {}
+	public Item() {}
 	
 	public Item(Long itemId, String itemType, String message, int itemCost) 
 	{

@@ -16,7 +16,7 @@ public class Bouquet
 	private String flowers;
 	private int cost;
 	
-	protected Bouquet() {}
+	public Bouquet() {}
 	
 	public Bouquet(Long bouId, String bouType, String flowers, int cost) 
 	{

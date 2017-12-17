@@ -15,7 +15,7 @@ public class Transaction {
 	private Long packId;
 	private Long userId;
 	
-	protected Transaction() {}
+	public Transaction() {}
 	
 	public Transaction(Long transId, int cost, Long packId, Long userId) 
 	{
